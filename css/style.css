@@ -1,0 +1,364 @@
+
+/* 초기화 */
+h1,h2,h3,h5{
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: transparent; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+/* start : login page */
+
+.hidden{
+    display: none !important;
+}
+
+.loginBox {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+}
+.login {
+    width: 560px;
+    height: 180px;
+    border-radius: 100px;
+    margin: 0 auto;
+    vertical-align: middle;
+    background-color: rgba(235, 235, 235, 0.801);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 5px 10px rgba(43, 43, 43, 0.621);
+
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.login h1 {
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+#login-form input {
+    width: 400px;
+    height: 50px;
+    border: none;
+    /* font-family: var(--font1); */
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    border-bottom: solid 1px black;
+}
+
+#login-form input::placeholder {
+    /* font-family: var(--font1); */
+    font-size: 1.5rem;
+    text-align: center;
+    position: relative;
+    bottom: -6px;
+    color: black;
+}
+
+#login-form input:focus {
+    outline: none;
+    border-bottom: solid 1px black;
+}
+
+#login-form input:focus::placeholder {
+    color: transparent;
+}
+/* End : Login Page */
+
+/* start : main page & App Box*/
+.mainBox {
+    width: 1500px;
+    height: 800px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 25px 25px 125px;
+    position: absolute;
+}
+
+.appBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90%;
+}
+/* End : main page & App box */
+
+/* Start : 기존 Box 형태 */
+.box {
+    width: 100%;
+    /* border: 1px solid #f0f0f0; */
+    background-color: rgba(350, 350, 350, 0.85);
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 5px 10px rgba(43, 43, 43, 0.621);
+}
+/* End : 기존 Box 형태 */
+
+
+/* col1 Start : greeting & clock & weather */
+.col1 {
+    width: 350px;
+    height: 100%;
+    margin-right: 30px;
+}
+
+.greetingBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100px;
+
+}
+
+#greeting{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.clock-container{
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 40px;
+}
+
+#today{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+#clock,#apm{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.clockBox{
+    display: flex;
+    justify-content: center;
+}
+
+
+.weather-container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.weatherTitle{
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.weatherBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.weather-icon img{
+    width: 90px;
+    height:90px;
+    margin-bottom: 20px;
+}
+
+.weather-main{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+/* col1 End : greeting & clock & weather */
+
+/* col2 Start : To Do List */
+.col2 {
+    /* background-color: lightcoral; */
+    width: 450px;
+    height: 100%;
+    margin-right: 30px;
+}
+
+.todo-container{
+    display: flex;
+    flex-direction: column;
+    height: 615px;
+    padding: 30px;
+}
+
+.todoTitle{
+    text-align: center;
+}
+
+.todoBox{
+    margin-top: 30px;
+}
+
+#todo-form{
+    text-align: center;
+}
+
+#todo-form input {
+    width: 350px;
+    height: 50px;
+    border: none;
+    /* font-family: var(--font1); */
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    border-bottom: solid 1px black;
+}
+
+#todo-form input::placeholder {
+    /* font-family: var(--font1); */
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    bottom: -6px;
+    color: black;
+}
+
+#todo-form input:focus {
+    outline: none;
+    border-bottom: solid 1px black;
+}
+
+#todo-form input:focus::placeholder {
+    color: transparent;
+}
+
+#todo-list li{
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+}
+
+#todo-list li:active{
+    text-decoration: line-through;
+}
+
+#todo-list button{
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+}
+/* col2 End : To Do List */
+
+/* col3 Start : timer & Quotes */
+.col3 {
+    width: 350px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.timer-container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 30px;
+}
+
+.focus-durationBox{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.focus-durationBox label{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+#timer {
+    font-size: 3rem;
+}
+
+.timerBtnBox{
+    margin-bottom: 15px;
+}
+
+.timerBtnBox button{
+    background-color: transparent;
+    border: 1px solid rgba(192, 200, 227, 0.98);
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.timerBtnBox button:hover{
+    background-color: rgba(192, 200, 227, 0.98);
+}
+
+select{
+    display: block;
+    margin: 5px auto -5px;
+}
+
+#quote-container{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px 45px;
+}
+#quote-content{
+    font-size: 1.2rem;
+}
+
+#quote-author{
+    margin-top: -5px;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+/* col3 End : timer & Quotes */

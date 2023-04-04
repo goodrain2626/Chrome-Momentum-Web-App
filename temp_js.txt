@@ -1,0 +1,40 @@
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("input");
+const link = document.querySelector("a");
+const greeting = document.querySelector("#greeting");
+
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
+
+function onLoginSubmit(event){
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, username);
+    paintGreetings(username);
+    console.log(username);
+}
+
+function paintGreetings(username){
+    greeting.innerText = `Hello ${username}`;
+    greeting.classList.remove(HIDDEN_CLASSNAME);
+}
+
+// loginForm.addEventListener("submit", onLoginSubmit)
+// 1. prevent - From 제출 시 새로고침 (브라우저 기본 동작)
+// 2. Form 양식을 제출하면 Form 양식을 사라지게 하고 싶음 - by ".hidden" 추가시켜서
+// 3. username이라는 변수에 input의 value값 (즉, 사용자가 입력한 사용자 이름)을 담는다
+// 4. greeting + 사용자 이름 합쳐서 h1에 글자를 넣어주고 (아직 #greeting은 hidden으로 숨겨져 있음)
+// 5. #greeting 에 .hidden을 제거해 화면에 나타나도록 함
+
+const savedUsername = localStorage.getItem(USERNAME_KEY);
+console.log(savedUsername);
+
+if(savedUsername === null){
+    // show the form
+    loginForm.classList.remove(HIDDEN_CLASSNAME);
+    loginForm.addEventListener("submit", onLoginSubmit)
+}else{
+    // show the greetings
+    paintGreetings(savedUsername);
+}

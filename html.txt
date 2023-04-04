@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Momentum App</title>
+</head>
+<body>
+    <!-- <form class="hidden" id="login-form">
+        <input required maxlength="15" type="text" placeholder="What is your name?">
+        <button>Log in</button>
+    </form> -->
+
+            <div class="loginBox" >
+                <div class="login">
+                <h1>What's your name?</h1>
+                <form action="" id="login-form">
+                    <input type="text" name="name" id="name" placeholder="Type your name." autofocus>
+                    <input type="submit" value="" class="hidden">
+                </form>
+                </div>
+            </div>
+        
+    
+        
+        <div class="mainBox hidden">
+
+            <div class="greetingBox">
+                    <h1 id="greeting" class="hidden"></h1>
+            </div>
+
+            <div class="appBox">
+
+                <div class="col1">
+                    <div class="clock-container">
+                        <h3 id="today">April 3 Mon</h3>
+                        <h2 id="clock">00:00</h2><h2 id="apm">AM</h2>
+                    </div>
+                    <div class="dday-container">
+                    
+                    </div>
+                    <div class="weather-container">
+
+                    </div>
+                </div>
+                <div class="col2">
+                    <form id="todo-form">
+                        <input type="text" placeholder="Write a ToDo and Press Enter">
+                    </form>
+                    <ul id="todo-list"></ul>
+                </div>
+                <div class="col3">
+                    <div class="timer-container">
+                        <h1>Timer</h1>
+                        <div>
+                            <label for="focus-duration">Focus duration:</label>
+                            <select id="focus-duration">
+                            <option value="10">10 minutes</option>
+                            <option value="25" selected>25 minutes</option>
+                            <option value="45">45 minutes</option>
+                            </select>
+                        </div>
+                        <div id="timer">
+                            25:00
+                        </div>
+                        <div>
+                            <button id="start">Start</button>
+                            <button id="pause">Pause</button>
+                            <button id="reset">Reset</button>
+                        </div>
+                    </div>
+                    <div id="quote-container">
+                        <p id="quote-content"></p>
+                        <p id="quote-author"></p>
+                    </div>
+                </div>
+
+            </div> 
+            <!-- appbox finish -->
+        </div>
+        <!-- mainbox finish -->
+        
+
+    <script src="js/login.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/timer.js"></script>
+</body>
+</html>
